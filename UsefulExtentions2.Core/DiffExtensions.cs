@@ -5,6 +5,10 @@ using System.Text;
 
 namespace UsefulExtentions2.Core {
 	public static class DiffExtensions {
+		/// <summary>
+		/// The function returns unique items found in two collections. 
+		/// Collections must be cleared of duplicate items.
+		/// </summary>
 		public static IEnumerable<DiffItem<T>> DiffTo<T>(
 		  this IEnumerable<T> leftSeq,
 		  IEnumerable<T> rightSeq,
