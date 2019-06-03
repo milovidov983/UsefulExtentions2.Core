@@ -22,5 +22,16 @@ namespace UsefulExtentions2.Core {
 			Left = left;
 			Right = right;
 		}
+
+		public static DiffItem<T> OnlyInLeft(T value) {
+			return new DiffItem<T>(value, DiffKind.OnlyInLeft);
+		}
+		public static DiffItem<T> OnlyInRight(T value) {
+			return new DiffItem<T>(value, DiffKind.OnlyInRight);
+		}
+
+		public static DiffItem<T> Modified(T left, T right) {
+			return new DiffItem<T>(left, right);
+		}
 	}
 }
